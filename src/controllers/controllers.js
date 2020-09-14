@@ -6,7 +6,7 @@ const Product = new mongoose.model('Product', ProductSchema);
 export const addnewProduct = (req, res) => {
     let newProduct = new Product(req.body);
 
-    newProduct.Save((err, Product) => {
+    newProduct.save((err, Product) => {
         if (err) {
             res.send(err);
         }
